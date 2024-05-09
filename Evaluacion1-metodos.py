@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 import simpy
 import random
+from ttkthemes import ThemedStyle
 
 class ModeloRed:
     def __init__(self, nodos, llegadas_por_nodo):
@@ -27,7 +28,9 @@ class ModeloRed:
 class InterfazGrafica:
     def __init__(self, root):
         self.root = root
-        self.root.title("Modelo de Red de Colas Interconectadas")
+        self.root.title("Modelo de Red de Colas Interconectadas - Neil Rangel")
+        self.style = ThemedStyle(self.root)
+        self.style.theme_use('equilux')
 
         self.frame = ttk.Frame(self.root)
         self.frame.pack(padx=20, pady=20)
